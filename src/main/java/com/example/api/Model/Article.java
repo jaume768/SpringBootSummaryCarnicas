@@ -14,7 +14,7 @@ public class Article {
 
     @Id
     @Column(nullable = false, name = "ARTCOD")
-    private Float articleCode;
+    private Integer articleCode;
 
     @Column(name = "ARTDES")
     private String articleName;

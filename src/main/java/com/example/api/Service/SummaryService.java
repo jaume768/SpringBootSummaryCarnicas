@@ -59,10 +59,10 @@ public class SummaryService {
                     .collect(Collectors.toList());
         }
 
-        Map<Float, String> articles = articleRepository.findAll().stream()
+        Map<Integer, String> articles = articleRepository.findAll().stream()
                 .collect(Collectors.toMap(Article::getArticleCode, Article::getArticleName));
 
-        Map<Long, String> clients = clientRepository.findAll().stream()
+        Map<Integer, String> clients = clientRepository.findAll().stream()
                 .collect(Collectors.toMap(Client::getClientId, Client::getComercialName));
 
         Map<Integer, String> deliveryMen = deliveryManRepository.findAll().stream()
@@ -71,7 +71,7 @@ public class SummaryService {
         return orders.stream().map(order -> mapToDto(order, articles, clients, deliveryMen)).collect(Collectors.toList());
     }
 
-    private LineOrderDto mapToDto(LiniesNoFacturades order, Map<Float, String> articles, Map<Long, String> clients, Map<Integer, String> deliveryMen) {
+    private LineOrderDto mapToDto(LiniesNoFacturades order, Map<Integer, String> articles, Map<Integer, String> clients, Map<Integer, String> deliveryMen) {
         LineOrderDto dto = new LineOrderDto();
         dto.setId(order.getLineId());
         dto.setOrderNumber(order.getDocumentNumber());

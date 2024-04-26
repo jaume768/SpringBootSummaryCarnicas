@@ -6,11 +6,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ClientDto {
-    private Long code;
+    private Integer code;
     private String name;
 
 
-    public ClientDto(Long clicod, String clinco) {
+    public ClientDto(Integer clicod, String clinco) {
         this.code = clicod;
         this.name = clinco;
     }

@@ -6,10 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ArticleDto {
-    private Float code;
+    private Integer code;
     private String name;
 
-    public ArticleDto(Float artcod, String artdes) {
+    public ArticleDto(Integer artcod, String artdes) {
         this.code = artcod;
         this.name = artdes;
     }

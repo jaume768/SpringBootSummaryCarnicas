@@ -43,14 +43,14 @@ public class SummaryController {
 
     @GetMapping("/summary")
     public List<LineOrderDto> getLineOrders(
-            @RequestParam String fecha,
+            @RequestParam String date,
             @RequestParam String filterType,
             @RequestParam Integer filterCode) {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date parsedDate = null;
         try {
-            parsedDate = formatter.parse(fecha);
+            parsedDate = formatter.parse(date);
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(parsedDate);
             calendar.set(Calendar.HOUR_OF_DAY, 0);
