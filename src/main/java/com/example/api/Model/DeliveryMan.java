@@ -14,7 +14,7 @@ public class DeliveryMan {
     private Integer id;
 
     @Column(name = "XOFCOD")
-    private Long deliveryManId;
+    private Integer deliveryManId;
 
     @Column(name = "XOFNOM")
     private String deliveryManName;

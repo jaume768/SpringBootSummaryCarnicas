@@ -23,8 +23,11 @@ public class LineOrderDto {
     private String observation;
     private Long deliveryManCode;
     private String deliveryManName;
-    private final String dockCode = "3F";
-    private final String dockName = "Passilos";
+    private String dockCode;
+    private String dockName;
+    private String orderType;
+    private BigDecimal orderUnit;
+    private String orderTypeUnit;
 
     // Constructor, getters y setters
 

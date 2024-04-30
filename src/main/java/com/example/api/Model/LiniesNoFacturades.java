@@ -42,7 +42,19 @@ public class LiniesNoFacturades {
     @Column(name = "ALLXOF")
     private Integer deliveryPersonAssigned;
 
-    @Column(name = "ALLTUN")
+    @Column(name = "ALLUMI")
     private String typeunit;
+
+    @Column(name = "ALLTIP")
+    private String orderType;
+
+    @Column(name = "ALLUNC")
+    private BigDecimal unitsOrder;
+
+    @Column(name = "ALLKGC")
+    private BigDecimal kgOrder;
+
+    @Column(name = "ALLTUN")
+    private String orderUnitType;
 
 }
