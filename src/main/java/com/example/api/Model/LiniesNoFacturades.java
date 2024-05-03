@@ -1,6 +1,8 @@
 package com.example.api.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import jakarta.persistence.*;
 
@@ -11,6 +13,8 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "GCARNALL")
 public class LiniesNoFacturades {
 
